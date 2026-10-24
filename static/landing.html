@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f5f2ea">
+  <title>HypeCheck — Want it. Wait. Decide.</title>
+  <meta name="description" content="Save what you want, wait a little, then decide with a clear head. HypeCheck is a calm wishlist and spending tracker with Otto the otter. Free, private, no ads.">
+  <link rel="canonical" href="https://hypecheck-app.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="HypeCheck — Want it. Wait. Decide.">
+  <meta property="og:description" content="Love it now. Still love it later? Give the hype a little time to settle.">
+  <meta property="og:image" content="https://hypecheck-app.vercel.app/assets/landing/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=3">
+  <link rel="manifest" href="/manifest.webmanifest?v=4">
+  <link rel="preload" href="/assets/manrope-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/landing/hero-poster.webp" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="/style.css?v=13">
+  <link rel="stylesheet" href="/landing.css?v=2">
+  <script src="/landing.js?v=2" defer></script>
+</head>
+<body class="landing">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="l-nav">
+    <a class="brand" href="/"><img src="/assets/app-icon-192.png?v=3" alt="" width="36" height="36"><span class="wordmark">hype<b>check</b><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12"/><path d="m6.8 12.6 3.4 3.4 7-7.6"/></svg></span></a>
+    <nav aria-label="Account">
+      <a class="l-signin" href="/login">Sign in</a>
+      <a class="btn btn-primary l-nav-cta" href="/signup">Get started</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="l-hero" aria-labelledby="hero-title">
+      <div class="l-hero-copy">
+        <p class="eyebrow enter" style="--d:0"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 3C9 3 3 6 4 14c1 6 9 7 13 3 4-4 3-10 3-14Z"/><path d="m3 21 11-11"/></svg>Small pauses. Better choices.</p>
+        <h1 id="hero-title" class="enter" style="--d:1">Love it now.<br><em>Still love it later?</em></h1>
+        <p class="l-lead enter" style="--d:2">Save the thing you want. Wait a little. Then decide with a clear head. Otto keeps the timer, you keep the money you would have regretted spending.</p>
+        <div class="l-cta-row enter" style="--d:3">
+          <a class="btn btn-primary l-google" href="/signup">Get started free</a>
+          <a class="link" href="#how">See how it works</a>
+        </div>
+        <p class="l-fine enter" style="--d:4">Free. No ads. No tracking. Your wishes stay yours.</p>
+      </div>
+
+      <div class="l-hero-art enter" style="--d:2">
+        <div class="l-scene">
+          <video class="l-video" autoplay muted loop playsinline preload="metadata" poster="/assets/landing/hero-poster.webp" width="1080" height="1080" aria-label="Otto the otter floating on a calm river while a sneaker, headphones and a camera drift past on lily pads">
+            <source src="/assets/landing/hero-loop.webm" type="video/webm">
+            <source src="/assets/landing/hero-loop.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="l-float l-float-timer" aria-hidden="true"><span class="chip chip-waiting"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-demo-timer>1d 23h 59m left</span></span><strong>The weekend sneakers</strong><span class="bar amber"><i data-demo-bar style="width:38%"></i></span></div>
+        <div class="l-float l-float-saved" aria-hidden="true"><img src="/assets/otto-coin-icon.webp" alt="" width="40" height="40"><span><small>Money you didn’t spend</small><strong class="money">₱3,295</strong></span></div>
+      </div>
+    </section>
+
+    <section class="l-steps" id="how" aria-labelledby="steps-title">
+      <header class="l-head reveal"><p class="eyebrow">How it works</p><h2 id="steps-title">Three steps.<br>One honest pause.</h2></header>
+      <ol class="l-step-list">
+        <li class="l-step reveal">
+          <div class="l-step-art tone-style"><img src="/assets/landing/step-want.webp" alt="Otto holding up a phone showing a sneaker he loves" width="640" height="640" loading="lazy" decoding="async"></div>
+          <div class="l-step-copy"><span class="l-num">1</span><h3>Want it</h3><p>Saw something you love? Save it here first. Add the price and, if you like, why you want it. No checkout button, no pressure.</p></div>
+        </li>
+        <li class="l-step reveal">
+          <div class="l-step-art tone-food"><img src="/assets/landing/step-wait.webp" alt="Otto asleep, hugging a golden hourglass" width="640" height="640" loading="lazy" decoding="async"></div>
+          <div class="l-step-copy"><span class="l-num">2</span><h3>Wait</h3><p>Pick a pause, from 24 hours to a week. Otto keeps the timer running while the excitement does what excitement does: settle.</p></div>
+        </li>
+        <li class="l-step reveal">
+          <div class="l-step-art tone-lifestyle"><img src="/assets/landing/step-decide.webp" alt="Otto weighing a shopping bag in one paw against a gold coin in the other" width="640" height="640" loading="lazy" decoding="async"></div>
+          <div class="l-step-copy"><span class="l-num">3</span><h3>Decide</h3><p>When time is up, choose with a clear head: buy it, let it go, or give it more time. Whatever you pick, it was really your choice.</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="l-app" aria-labelledby="app-title">
+      <header class="l-head reveal"><p class="eyebrow">The app</p><h2 id="app-title">Your money, at your pace.</h2><p>A wishlist that waits with you, and a spending tracker that doesn’t judge.</p></header>
+      <div class="l-phones" role="list">
+        <figure class="l-phone reveal" role="listitem"><div class="l-frame"><img src="/assets/landing/screen-home.webp" alt="HypeCheck home screen: a wish is ready to decide, with the money you didn’t spend below it" width="585" height="1266" loading="lazy" decoding="async"></div><figcaption><strong>See what’s ready</strong>Home shows the one thing that needs you today.</figcaption></figure>
+        <figure class="l-phone l-phone-mid reveal" role="listitem"><div class="l-frame"><img src="/assets/landing/screen-decide.webp" alt="Decision sheet with three choices: I still want it, Let it go, More time" width="585" height="1266" loading="lazy" decoding="async"></div><figcaption><strong>Decide without pressure</strong>Three honest options, and room for a thought.</figcaption></figure>
+        <figure class="l-phone reveal" role="listitem"><div class="l-frame"><img src="/assets/landing/screen-spending.webp" alt="Spending screen with a budget ring, category breakdown and expenses grouped by day" width="585" height="1266" loading="lazy" decoding="async"></div><figcaption><strong>Know where it goes</strong>A budget, categories and every expense by day.</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="l-math" aria-labelledby="math-title">
+      <div class="l-math-inner reveal">
+        <div>
+          <p class="eyebrow">Do the math</p>
+          <h2 id="math-title">Skip two impulse buys a month.</h2>
+          <p class="l-math-copy">At ₱1,500 each, that is</p>
+          <p class="l-math-number money"><span data-count="36000">₱36,000</span></p>
+          <p class="l-math-copy">a year that stays in your pocket. HypeCheck counts yours as you go.</p>
+        </div>
+        <img class="l-math-otto" src="/assets/otto-peek-coin.webp?v=2" alt="Otto hugging a gold coin" width="480" height="559" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <section class="l-promise" aria-labelledby="promise-title">
+      <header class="l-head reveal"><p class="eyebrow">Otto’s promise</p><h2 id="promise-title">Built to help you spend less, not scroll more.</h2></header>
+      <ul class="l-promise-list">
+        <li class="reveal"><span class="tile tone-lifestyle"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6Z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Private</h3><p>Only you can see your wishes and spending. No one else, ever.</p></li>
+        <li class="reveal"><span class="tile tone-food"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m5.6 5.6 12.8 12.8"/></svg></span><h3>No ads, no tracking</h3><p>Nothing here is trying to sell you anything. That would defeat the point.</p></li>
+        <li class="reveal"><span class="tile tone-tech"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/></svg></span><h3>Lives on your phone</h3><p>Add it to your home screen from Safari or Chrome. No app store needed.</p></li>
+      </ul>
+    </section>
+
+    <section class="l-final reveal" aria-labelledby="final-title">
+      <img src="/assets/otto-celebrate.webp" alt="Otto cheering" width="640" height="640" loading="lazy" decoding="async">
+      <h2 id="final-title">Let the hype float by.</h2>
+      <p>Start with one thing you want right now.</p>
+      <a class="btn btn-primary" href="/signup">Add my first wish</a>
+    </section>
+  </main>
+
+  <footer class="l-foot">
+    <a class="brand" href="/"><img src="/assets/app-icon-192.png?v=3" alt="" width="28" height="28"><span class="wordmark">hype<b>check</b><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12"/><path d="m6.8 12.6 3.4 3.4 7-7.6"/></svg></span></a>
+    <p>Want it. Wait. Decide.</p>
+    <nav aria-label="Legal"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/login">Sign in</a></nav>
+  </footer>
+</body>
+</html>

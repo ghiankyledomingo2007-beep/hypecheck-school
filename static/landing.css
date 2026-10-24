@@ -1,0 +1,143 @@
+/* HypeCheck landing page. Builds on the tokens, buttons, chips and tones in style.css. Mobile-first. */
+
+.landing{overflow-x:hidden}
+.landing main{max-width:none;padding:0;min-height:0}
+.landing h1,.landing h2,.landing h3{font-family:var(--display);text-wrap:balance}
+.l-nav,.l-hero,.l-steps,.l-app,.l-promise,.l-final,.l-foot,.l-math-inner{width:min(1160px,100% - 40px);margin-inline:auto}
+
+/* ── Nav ── */
+.l-nav{display:flex;align-items:center;justify-content:space-between;padding:calc(12px + env(safe-area-inset-top,0px)) 0 8px}
+.l-nav nav{display:flex;align-items:center;gap:6px}
+.l-signin{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;font-weight:600;font-size:15px;color:var(--ink-2);white-space:nowrap}
+.l-nav-cta{display:none;min-height:44px;padding:0 16px;border-radius:13px}  /* phones: the hero button is right below */
+
+.l-nav .wordmark{font-size:19px}.l-foot .wordmark{font-size:15px}
+/* once per page load: the dot lands, then the tick draws itself */
+.l-nav .tick circle{transform-origin:center;transform:scale(.4);opacity:0;animation:tick-pop 420ms var(--ease-out) 500ms forwards}
+.l-nav .tick path{stroke-dasharray:22;stroke-dashoffset:22;animation:tick-draw 360ms var(--ease-out) 720ms forwards}
+@keyframes tick-pop{60%{transform:scale(1.12);opacity:1}to{transform:scale(1);opacity:1}}
+@keyframes tick-draw{to{stroke-dashoffset:0}}
+
+/* ── Hero ── */
+.l-hero{display:grid;gap:30px;padding:26px 0 56px}
+.l-hero .eyebrow{color:#2c6650}
+.l-hero h1{font-size:clamp(40px,11.5vw,70px);line-height:1;letter-spacing:-.05em;font-weight:800;margin:16px 0 18px}
+.l-hero h1 em{font-style:normal;color:var(--teal)}
+.l-lead{font-size:17px;line-height:1.55;color:var(--ink-2);max-width:34ch}
+.l-cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;margin-top:24px}
+.l-google{width:auto;min-height:54px;padding:0 22px;font-size:16px;border-radius:16px;box-shadow:0 0 0 1px #dadce0 inset,0 10px 24px -14px rgba(16,48,47,.5)}
+.l-fine{margin-top:14px;font-size:13px;color:var(--ink-3)}
+.l-hero-art{position:relative}
+.l-scene{border-radius:32px;overflow:hidden;aspect-ratio:1;background:#f4eee0;box-shadow:0 0 0 1px rgba(16,48,47,.06),0 40px 70px -40px rgba(14,59,63,.55)}
+.l-video{display:block;width:100%;height:100%;object-fit:cover}
+/* small live cards layered over the scene: depth, and they explain the product at a glance */
+.l-float{position:absolute;display:grid;gap:7px;padding:12px 14px;border-radius:18px;background:rgba(255,254,251,.88);backdrop-filter:blur(16px) saturate(170%);-webkit-backdrop-filter:blur(16px) saturate(170%);box-shadow:0 0 0 1px rgba(16,48,47,.07),0 18px 34px -18px rgba(16,48,47,.5)}
+.l-float strong{font:700 15px/1.2 var(--display);letter-spacing:-.02em}
+.l-float-timer{left:-6px;top:22px;min-width:190px}
+.l-float-saved{right:-6px;bottom:24px;grid-template-columns:40px auto;align-items:center;gap:10px}
+.l-float-saved small{display:block;font-size:12px;color:var(--gold);font-weight:600}
+.l-float-saved strong{font-size:22px;color:#5d3c08;letter-spacing:-.04em}
+
+/* ── Section heads ── */
+.l-head{margin-bottom:28px}
+.l-head .eyebrow{color:var(--ink-3);margin-bottom:12px}
+.l-head h2,.l-math h2,.l-final h2{font-size:clamp(30px,8vw,52px);line-height:1.04;letter-spacing:-.045em;font-weight:800}
+.l-head p:last-child{margin-top:12px;color:var(--ink-2);font-size:17px;max-width:40ch}
+
+/* ── Steps ── */
+.l-steps{padding:40px 0 56px}
+.l-step-list{display:grid;gap:18px}
+.l-step{display:grid;gap:4px;border-radius:var(--r-lg);background:var(--surface);box-shadow:var(--shadow);overflow:hidden}
+.l-step-art{display:grid;place-items:center;background:var(--tone-bg);padding:18px}
+.l-step-art img{width:min(62%,260px);height:auto}
+.l-step-copy{padding:20px 22px 24px}
+.l-num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;font:700 14px var(--display)}
+.l-step h3{font-size:26px;letter-spacing:-.035em;margin:12px 0 6px}
+.l-step p{color:var(--ink-2);font-size:16px;line-height:1.55}
+
+/* ── App screens ── */
+.l-app{padding:40px 0 30px}
+.l-phones{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 20px 26px;margin-inline:-20px;scrollbar-width:none;overscroll-behavior-x:contain}
+.l-phones::-webkit-scrollbar{display:none}
+.l-phone{flex:0 0 min(72%,280px);scroll-snap-align:center;margin:0}
+.l-frame{border-radius:34px;padding:8px;background:var(--ink);box-shadow:0 30px 50px -28px rgba(14,59,63,.7)}
+.l-frame img{display:block;width:100%;height:auto;border-radius:27px}
+.l-phone figcaption{margin-top:16px;color:var(--ink-2);font-size:15px;line-height:1.45}
+.l-phone figcaption strong{display:block;font:700 18px var(--display);letter-spacing:-.025em;color:var(--ink);margin-bottom:2px}
+
+/* ── Do the math ── */
+.l-math{background:var(--deep);color:#eef6f1;margin-top:40px;overflow:hidden}
+.l-math-inner{position:relative;padding:54px 0 0;display:grid}
+.l-math .eyebrow{color:#8fe0b4;margin-bottom:14px}
+.l-math-copy{font-size:18px;color:#b9d0c9;margin-top:12px;max-width:30ch}
+.l-math-number{font-size:clamp(64px,19vw,150px);font-weight:800;letter-spacing:-.06em;line-height:1;color:#f5d06f;margin-top:6px}
+.l-math-otto{width:min(56%,250px);height:auto;justify-self:end;margin-top:10px}
+
+/* ── Promise ── */
+.l-promise{padding:64px 0 30px}
+.l-promise-list{display:grid;gap:14px;list-style:none;padding:0;margin:0}
+.l-promise-list li{padding:22px;border-radius:var(--r-lg);background:var(--sunk)}
+.l-promise-list h3{font-size:20px;letter-spacing:-.03em;margin:14px 0 4px}
+.l-promise-list p{color:var(--ink-2);line-height:1.5}
+
+/* ── Final CTA + footer ── */
+.l-final{text-align:center;padding:40px 0 70px;display:grid;justify-items:center}
+.l-final img{width:min(54%,220px);height:auto}
+.l-final p{color:var(--ink-2);font-size:17px;margin:10px 0 22px}
+.l-final .btn{min-height:54px;padding:0 28px;font-size:16px;border-radius:16px}
+.l-foot{display:grid;gap:8px;justify-items:center;padding:26px 0 calc(34px + env(safe-area-inset-bottom,0px));box-shadow:0 1px 0 var(--line) inset;color:var(--ink-3);font-size:14px}
+.l-foot nav{display:flex;gap:4px}
+.l-foot nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;font-weight:600;color:var(--ink-2)}
+
+/* ── Motion: marketing surface, so entrances are allowed; all transform/opacity, all once ── */
+.enter{opacity:0;transform:translateY(14px);animation:l-enter 600ms var(--ease-out) calc(80ms + var(--d,0) * 70ms) forwards}
+@keyframes l-enter{to{opacity:1;transform:none}}
+.l-float{opacity:0;transform:translateY(12px) scale(.96);animation:l-enter 600ms var(--ease-out) forwards}
+.l-float-timer{animation-delay:700ms}.l-float-saved{animation-delay:900ms}
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity 600ms var(--ease-out),transform 600ms var(--ease-out)}
+.js .reveal.in{opacity:1;transform:none}
+.js .l-step.reveal .l-step-art img{transform:scale(.9);transition:transform 700ms var(--ease-out) 120ms}
+.js .l-step.reveal.in .l-step-art img{transform:none}
+.l-phone:nth-child(2).reveal{transition-delay:80ms}.l-phone:nth-child(3).reveal{transition-delay:160ms}
+.l-promise-list li:nth-child(2).reveal{transition-delay:70ms}.l-promise-list li:nth-child(3).reveal{transition-delay:140ms}
+
+/* phones: the screens sit in a sideways carousel, so an off-screen one must not wait hidden for a scroll that never comes */
+@media(max-width:760px){.js .l-phone.reveal{opacity:1;transform:none}}
+
+@media(hover:hover) and (pointer:fine){
+  .l-signin:hover,.l-foot nav a:hover{color:var(--teal-dark)}
+  .l-step{transition:transform 200ms var(--ease-out),box-shadow 200ms ease}
+  .l-step:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift)}
+}
+
+/* ── Wider screens ── */
+@media(min-width:761px){
+  .l-nav{padding-top:22px}.l-nav .wordmark{font-size:23px}
+  .l-nav-cta{display:inline-flex}
+  .l-hero{grid-template-columns:minmax(0,1.3fr) minmax(0,.9fr);align-items:center;gap:56px;padding:48px 0 96px}
+  .l-lead{font-size:19px}
+  .l-float-timer{top:54px}.l-float-saved{bottom:60px}
+  .l-head{margin-bottom:44px}
+  .l-steps{padding:40px 0 96px}
+  /* editorial: illustration and copy swap sides down the page */
+  .l-step{grid-template-columns:1fr 1fr;align-items:center;gap:0}
+  .l-step:nth-child(even) .l-step-art{order:2}
+  .l-step-art{height:100%;min-height:340px;padding:30px}.l-step-art img{width:min(70%,320px)}
+  .l-step-copy{padding:40px 48px}.l-step h3{font-size:36px}.l-step p{font-size:18px}
+  .l-phones{overflow:visible;justify-content:center;align-items:flex-start;gap:34px;margin:0;padding:10px 0 40px}
+  .l-phone{flex:0 1 270px}.l-phone-mid{margin-top:46px}
+  .l-math-inner{grid-template-columns:1.25fr .75fr;align-items:end;padding-top:90px}
+  .l-math-otto{width:min(100%,340px)}.l-math-copy{font-size:21px}
+  .l-promise{padding:110px 0 40px}.l-promise-list{grid-template-columns:repeat(3,1fr);gap:18px}
+  .l-final{padding:70px 0 110px}
+  .l-foot{grid-template-columns:auto 1fr auto;justify-items:start;align-items:center;gap:18px}
+}
+
+@media(min-width:1080px){.l-hero h1{white-space:nowrap}.l-float-timer{left:-34px}.l-float-saved{right:-26px}}
+
+@media(prefers-reduced-motion:reduce){
+  .l-nav .tick circle{transform:none;opacity:1}.l-nav .tick path{stroke-dashoffset:0}
+  .enter,.l-float{opacity:1;transform:none;animation:none}
+  .js .reveal,.js .l-step.reveal .l-step-art img{opacity:1;transform:none;transition:none}
+}
+@media(prefers-reduced-transparency:reduce){.l-float{background:var(--surface);backdrop-filter:none;-webkit-backdrop-filter:none}}

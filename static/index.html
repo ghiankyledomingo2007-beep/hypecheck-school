@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
+  <meta name="theme-color" content="#f5f2ea">
+  <meta name="description" content="A little pause. A better purchase. HypeCheck helps you want it, wait, and decide—with Otto by your side.">
+  <title>HypeCheck — Want it. Wait. Decide.</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=3">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/app-icon-192.png?v=3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=3">
+  <link rel="manifest" href="/manifest.webmanifest?v=4">
+  <link rel="preload" href="/assets/manrope-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css?v=13">
+  <script src="/app.js?v=14" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <aside class="rail" aria-label="Main navigation">
+    <a class="brand" href="#home"><img src="/assets/app-icon-192.png?v=3" alt="" width="40" height="40"><span class="wordmark">hype<b>check</b><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12"/><path d="m6.8 12.6 3.4 3.4 7-7.6"/></svg></span></a>
+    <button class="btn btn-primary rail-new" data-action="new-wish"><span data-icon="plus"></span>New wish</button>
+    <nav id="rail-nav"></nav>
+    <div class="rail-foot">
+      <div class="rail-otto"><div id="rail-otto"></div><strong>Good things can wait.</strong><p>Your money. Your pace.</p></div>
+      <button class="rail-about" data-action="about"><span data-icon="info"></span>About HypeCheck</button>
+    </div>
+  </aside>
+
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="#home"><img src="/assets/app-icon-192.png?v=3" alt="" width="34" height="34"><span class="wordmark">hype<b>check</b><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12"/><path d="m6.8 12.6 3.4 3.4 7-7.6"/></svg></span></a>
+      <div class="topbar-actions">
+        <button class="icon-btn" data-action="about" aria-label="About HypeCheck"><span data-icon="info"></span></button>
+        <button class="icon-btn bell" data-action="ready" aria-label="Wishes ready for a decision"><span data-icon="bell"></span><b id="bell-count" hidden></b></button>
+      </div>
+    </header>
+    <main id="main" tabindex="-1"><div class="loading"><span class="spinner"></span>Making room to think…</div></main>
+  </div>
+
+  <nav class="dock" aria-label="Main navigation" id="dock"></nav>
+
+  <dialog id="sheet" aria-labelledby="sheet-title"><div id="sheet-body"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
